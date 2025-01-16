@@ -1,5 +1,16 @@
-// Question: Comment organiser le point d'entrée de l'application ?
-// Question: Quelle est la meilleure façon de gérer le démarrage de l'application ?
+// Question1: Comment organiser le point d'entrée de l'application ?
+//Réponse à la Question 1 :Organiser le point d'entrée de l'application implique de structurer le fichier principal
+//  de manière à initialiser toutes les configurations essentielles. Cela inclut la configuration des variables 
+// d'environnement, l'établissement des connexions aux bases de données, la configuration des middlewares Express, 
+// et le montage des routes. Le point d'entrée doit être clair et minimal, déléguant les responsabilités spécifiques
+//  à d'autres modules.
+// Question 2: Quelle est la meilleure façon de gérer le démarrage de l'application ?
+//Réponse à la Question 2 :La meilleure façon de gérer le démarrage de l'application est d'utiliser une approche 
+// asynchrone pour gérer les connexions aux bases de données et les autres services critiques. Cela permet de 
+// capturer et de gérer les erreurs dès le démarrage, empêchant l'application de démarrer dans un état instable. 
+// Il est également important de gérer proprement l'arrêt de l'application (par exemple, en fermant les connexions 
+// aux bases de données) pour éviter les fuites de ressources ou la corruption de données.
+
 const express = require('express');
 const config = require('./config/env');
 const db = require('./config/db');

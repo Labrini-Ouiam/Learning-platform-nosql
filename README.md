@@ -1,10 +1,5 @@
 # Projet de fin de module NoSQL
 # LABRINI OUIAM GLSID 2
-// Question : Pourquoi créer un module séparé pour les connexions aux bases de données ?
-// Réponse : Maintenabilité : Toute modification liée à la gestion des bases de données peut être effectuée en un seul endroit.
-// Question : Comment gérer proprement la fermeture des connexions ?
-// Réponse : mongoClient.close() et redisClient.quit()).
-
 
 Installation et lancement  : 
 npm install
